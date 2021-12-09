@@ -57,7 +57,7 @@ const App = () => {
         <Navbar user={user} />
 
         <Routes>
-          <Route path="/" exact element={<Menuone />} />
+          <Route path="/" exact element={user ? <Menuone /> : <Login />} />
           <Route path="/Location" element={<Location />} />
           <Route path="/Reservation" element={<Reservation />} />
           <Route path="/About" element={<About />} />
